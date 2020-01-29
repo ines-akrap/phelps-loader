@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+}
+
+.content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.phelps-loader {
+    position: relative;
+    height: 120px;
+    width: 100%;
+  }
+  .phelps {
+    animation: swimm alternate linear 21.5s infinite;
+  }
+  .phelps img {
+    height: 120px;
+    animation: flip 43s infinite;
+  }
+  
+  .phelps-pool {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    min-height: 63px;
+    width: 100%;
+    background-color: blue;
+    opacity: 0.6;
+  }
+  
+  @keyframes swimm {
+    from  {transform: translate(0px);}
+    to    {transform: translate(80%);}
+  }
+  
+  @keyframes flip {
+    0%    {transform: scaleX(1);}
+    49%   {transform: scaleX(1);}
+    50%   {transform: scaleX(-1);}
+    99%   {transform: scaleX(-1);}
+    100%  {transform: scaleX(1);}
+  }
